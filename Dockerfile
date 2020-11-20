@@ -15,4 +15,4 @@ FROM debian:buster-slim
 
 COPY --from=builder /workdir .
 
-ENTRYPOINT [ "/usr/bin/zola" ]
+ENTRYPOINT [ "sh" ]
