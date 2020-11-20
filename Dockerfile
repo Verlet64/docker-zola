@@ -14,5 +14,3 @@ RUN dockerize -n --verbose -o /workdir  /usr/bin/zola
 FROM debian:buster-slim
 
 COPY --from=builder /workdir .
-
-ENTRYPOINT [ "sh" ]
