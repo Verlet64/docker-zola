@@ -11,7 +11,7 @@ RUN curl -L https://github.com/getzola/zola/releases/download/$ZOLA_VERSION/zola
 RUN mv zola /usr/bin
 RUN dockerize -n --verbose -o /workdir  /usr/bin/zola
 
-FROM scratch
+FROM debian:buster-slim
 
 COPY --from=builder /workdir .
 
